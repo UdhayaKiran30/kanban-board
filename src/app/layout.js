@@ -22,7 +22,14 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col transition-colors duration-300">
+        <main className="flex-1 flex flex-col overflow-hidden">
+          {children}
+        </main>
+        <footer className="flex-shrink-0 py-4 text-center text-sm font-medium text-slate-500 dark:text-slate-400 border-t border-border/30 bg-card/30 backdrop-blur-sm">
+          @Udhaya Kiran
+        </footer>
+      </body>
     </html>
   );
 }
